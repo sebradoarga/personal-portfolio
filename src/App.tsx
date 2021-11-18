@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Homepage from "./components/pages/Homepage/Homepage";
 import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, NavLink, useLocation } from "react-router-dom";
@@ -7,14 +8,25 @@ import ContactPage from "./components/pages/Contact/ContactPage";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
 
 function App() {
+  const [previousPage, setPreviousPage] = useState<string>("");
+
   return (
     <div className="App">
       <AnimatePresence>
         <Routes>
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/" element={<Homepage />} />
+          <Route
+            path="/about"
+            element={<AboutPage setPreviousPage={setPreviousPage} />}
+          />
+          <Route
+            path="/contact"
+            element={<ContactPage setPreviousPage={setPreviousPage} />}
+          />
+          <Route
+            path="/portfolio"
+            element={<Portfolio setPreviousPage={setPreviousPage} />}
+          />
+          <Route path="/" element={<Homepage previousPage={previousPage} />} />
         </Routes>
       </AnimatePresence>
     </div>

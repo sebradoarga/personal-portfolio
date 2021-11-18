@@ -14,7 +14,17 @@ html {
 }
 
 body {
-  background: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(108, 182, 217, 1) 0%,
+    rgba(243, 187, 216, 1) 43%,
+    rgba(254, 240, 196, 1) 100%
+  );
+  background-size: 1000% 1000%;
+  animation: animate 10s ease-in-out infinite;
 }
 
 a {
@@ -33,18 +43,6 @@ ul {
 
 #portfolio-btn {
   flex-direction: column;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;
-}
-body::-webkit-scrollbar-track {
-  background: green;
-  border-radius: 20px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 20px;
 }
 
 @keyframes animate {

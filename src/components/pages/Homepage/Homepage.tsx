@@ -1,20 +1,32 @@
 import styled from "styled-components";
+import { useState } from "react";
 import { device } from "../../../device";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { motion } from "framer-motion";
-import { homePageVariants, pageTransition } from "../../../constants";
+import {
+  rightPageVariants,
+  leftPageVariants,
+  upPageVariants,
+  pageTransition,
+} from "../../../constants";
 import { Link } from "react-router-dom";
 
-const Homepage = () => {
+const Homepage = ({ previousPage }: { previousPage: string }) => {
   return (
     <Wrapper
       style={{ position: "absolute" }}
       initial="initial"
       animate="in"
       exit="out"
-      variants={homePageVariants}
+      variants={
+        previousPage === "about"
+          ? rightPageVariants
+          : previousPage === "contact"
+          ? leftPageVariants
+          : upPageVariants
+      }
       transition={pageTransition}
     >
       <Container>
@@ -50,13 +62,7 @@ const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    135.8deg,
-    rgba(26, 26, 29, 1) 27.1%,
-    rgba(111, 34, 50, 1) 77.5%
-  );
-  background-size: 1000% 1000%;
-  animation: animate 7.5s ease-in-out infinite;
+  background: transparent;
 `;
 
 const Container = styled.div`
