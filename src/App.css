@@ -13,6 +13,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background: black;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -22,10 +26,25 @@ ul {
   list-style: none;
 }
 
-#portfolio-btn {
+#portfolio-link {
   position: absolute;
   bottom: 0;
+}
+
+#portfolio-btn {
   flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: green;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 20px;
 }
 
 @keyframes animate {

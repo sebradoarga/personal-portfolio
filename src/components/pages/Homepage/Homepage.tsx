@@ -3,23 +3,40 @@ import { device } from "../../../device";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { motion } from "framer-motion";
+import { homePageVariants, pageTransition } from "../../../constants";
+import { Link } from "react-router-dom";
+
 const Homepage = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      style={{ position: "absolute" }}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={homePageVariants}
+      transition={pageTransition}
+    >
       <Container>
         <HorizontalAxis>
-          <Btn>
-            <ArrowBackIcon sx={{ fontSize: 40 }} />
-            About
-          </Btn>
+          <Link to="/about">
+            <Btn>
+              <ArrowBackIcon sx={{ fontSize: 40 }} />
+              About
+            </Btn>
+          </Link>
           <Header>Sebastian-Radu Oarga</Header>
-          <Btn>
-            Contact <ArrowForwardIcon sx={{ fontSize: 40 }} />
-          </Btn>
+          <Link to="/contact">
+            <Btn>
+              Contact <ArrowForwardIcon sx={{ fontSize: 40 }} />
+            </Btn>
+          </Link>
         </HorizontalAxis>
-        <Btn id="portfolio-btn">
-          Portfolio <ArrowDownwardIcon sx={{ fontSize: 40 }} />
-        </Btn>
+        <Link to="/portfolio" id="portfolio-link">
+          <Btn id="portfolio-btn">
+            Portfolio <ArrowDownwardIcon sx={{ fontSize: 40 }} />
+          </Btn>
+        </Link>
       </Container>
     </Wrapper>
   );
@@ -27,16 +44,12 @@ const Homepage = () => {
 
 export default Homepage;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-image: linear-gradient(
     135.8deg,
     rgba(26, 26, 29, 1) 27.1%,
@@ -76,7 +89,7 @@ const Btn = styled.button`
   border: none;
   color: white;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 2rem;
   cursor: pointer;
@@ -98,5 +111,9 @@ const Btn = styled.button`
     );
     -webkit-mask-size: 200%;
     animation: shine 1.2s infinite;
+  }
+
+  @media ${device.tablet} {
+    font-size: 5rem;
   }
 `;
