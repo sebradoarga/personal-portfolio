@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { downPageVariants, pageTransition } from "../../../constants";
-import { Link } from "react-router-dom";
+import Navbar from "../../Navbar";
 
 const AboutPage = ({
   setPreviousPage,
@@ -21,8 +21,7 @@ const AboutPage = ({
       variants={downPageVariants}
       transition={pageTransition}
     >
-      Hello
-      <Link to="/">Go back</Link>
+      <Navbar />
     </Wrapper>
   );
 };

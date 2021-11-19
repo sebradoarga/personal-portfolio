@@ -84,6 +84,7 @@ const Btn = styled.button`
   margin: 2rem;
   display: flex;
   align-items: center;
+  line-height: 6rem;
 
   & * {
     margin: 0.5rem;

@@ -34,6 +34,13 @@ ul {
   list-style: none;
 }
 
+.name-background {
+  background-image: url("./img/name-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @keyframes animate {
   0% {
     background-position: 0 50%;

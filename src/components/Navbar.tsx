@@ -1,14 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <Nav>
-      <Header>Sebastian-Radu Oarga</Header>
+      <Link to="/">
+        <Header>Sebastian-Radu Oarga</Header>
+      </Link>
       <Links>
-        <Item>Portfolio</Item>
-        <Item>About</Item>
-        <Item>Contact</Item>
+        <Link to="/about">
+          <Item>About</Item>
+        </Link>
+        <Link to="/portfolio">
+          <Item>Portfolio</Item>
+        </Link>
+        <Link to="/contact">
+          <Item>Contact</Item>
+        </Link>
       </Links>
     </Nav>
   );
