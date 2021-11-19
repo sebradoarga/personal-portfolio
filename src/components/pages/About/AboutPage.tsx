@@ -26,8 +26,8 @@ const AboutPage = ({
       <PageContent className="name-background">
         <Text>
           I'm a full-stack web developer with a passion for eye-catching design.
-          Currently enrolled in the Full Stack Program @ Integrify
-          International. Academy
+          Currently enrolled in the Full Stack Program @ Integrify International
+          Academy.
         </Text>
       </PageContent>
     </Wrapper>

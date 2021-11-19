@@ -62,3 +62,15 @@ ul {
     -webkit-mask-position: -50%;
   }
 }
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(4rem, 3rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

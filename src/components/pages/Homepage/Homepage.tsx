@@ -58,7 +58,10 @@ const PageContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Headshot = styled.img`
