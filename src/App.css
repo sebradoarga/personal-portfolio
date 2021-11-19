@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200;300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 html {
@@ -24,7 +22,7 @@ body {
     rgba(254, 240, 196, 1) 100%
   );
   background-size: 1000% 1000%;
-  animation: animate 10s ease-in-out infinite;
+  animation: animate 120s ease-in-out infinite;
 }
 
 a {
@@ -34,15 +32,6 @@ a {
 
 ul {
   list-style: none;
-}
-
-#portfolio-link {
-  position: absolute;
-  bottom: 0;
-}
-
-#portfolio-btn {
-  flex-direction: column;
 }
 
 @keyframes animate {

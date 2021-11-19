@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
 import { device } from "../../../device";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { motion } from "framer-motion";
 import {
   rightPageVariants,
@@ -12,6 +8,8 @@ import {
   pageTransition,
 } from "../../../constants";
 import { Link } from "react-router-dom";
+import HomeNavbar from "../../HomeNavbar";
+import headshot from "../../../img/headshot.png";
 
 const Homepage = ({ previousPage }: { previousPage: string }) => {
   return (
@@ -29,27 +27,21 @@ const Homepage = ({ previousPage }: { previousPage: string }) => {
       }
       transition={pageTransition}
     >
-      <Container>
-        <HorizontalAxis>
+      <HomeNavbar />
+      <PageContent>
+        <Headshot src={headshot} alt="" />
+        <Menu>
           <Link to="/about">
-            <Btn>
-              <ArrowBackIcon sx={{ fontSize: 40 }} />
-              About
-            </Btn>
+            <Btn>About</Btn>
           </Link>
-          <Header>Sebastian-Radu Oarga</Header>
+          <Link to="/portfolio">
+            <Btn>Portfolio</Btn>
+          </Link>
           <Link to="/contact">
-            <Btn>
-              Contact <ArrowForwardIcon sx={{ fontSize: 40 }} />
-            </Btn>
+            <Btn>Contact</Btn>
           </Link>
-        </HorizontalAxis>
-        <Link to="/portfolio" id="portfolio-link">
-          <Btn id="portfolio-btn">
-            Portfolio <ArrowDownwardIcon sx={{ fontSize: 40 }} />
-          </Btn>
-        </Link>
-      </Container>
+        </Menu>
+      </PageContent>
     </Wrapper>
   );
 };
@@ -59,41 +51,30 @@ export default Homepage;
 const Wrapper = styled(motion.div)`
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-`;
-
-const Container = styled.div`
-  background: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
   position: relative;
 `;
 
-const HorizontalAxis = styled.div`
+const PageContent = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 6rem;
 `;
 
-const Header = styled.h1`
-  color: #fff;
-  font-size: 5rem;
-  text-align: center;
-  display: none;
+const Headshot = styled.img`
+  border-radius: 30%;
+  max-width: 40rem;
+  display: block;
+`;
+
+const Menu = styled.ul`
+  margin-left: 3rem;
 `;
 
 const Btn = styled.button`
   background: none;
   border: none;
-  color: white;
+  color: #2f1a42;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
