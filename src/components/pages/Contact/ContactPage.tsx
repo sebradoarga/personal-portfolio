@@ -64,7 +64,7 @@ const PageContent = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;

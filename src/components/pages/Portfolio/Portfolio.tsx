@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { downPageVariants, pageTransition } from "../../../constants";
 import Navbar from "../../Navbar";
 import CountryTriviaPreview from "../../../img/country-trivia-preview.png";
+import BookStorePreview from "../../../img/bookstore-preview.png";
+import { Link } from "react-router-dom";
 
 const AboutPage = ({
   setPreviousPage,
@@ -24,9 +26,17 @@ const AboutPage = ({
     >
       <Navbar />
       <PageContent>
+        <BookStore>
+          <Link to="/the-story-store" className="preview">
+            <Preview src={BookStorePreview} alt="" className="bs-preview" />
+          </Link>
+          <Description className="bs-project-description project-description"></Description>
+        </BookStore>
         <CountryTrivia>
-          <Preview src={CountryTriviaPreview} alt="" className="preview" />
-          <CTDescription className="project-description"></CTDescription>
+          <Link to="/country-trivia" className="preview">
+            <Preview src={CountryTriviaPreview} alt="" className="ct-preview" />
+          </Link>
+          <Description className="ct-project-description project-description"></Description>
         </CountryTrivia>
       </PageContent>
     </Wrapper>
@@ -43,7 +53,16 @@ const Wrapper = styled(motion.div)`
 
 const PageContent = styled.div`
   overflow-y: auto;
-  min-height: 100vh;
+  padding-bottom: 5rem;
+  height: 87vh;
+`;
+
+const BookStore = styled.div`
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
 `;
 
 const CountryTrivia = styled.div`
@@ -52,6 +71,7 @@ const CountryTrivia = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 15%;
+  flex-direction: row-reverse;
 `;
 
 const Preview = styled.img`
@@ -59,14 +79,13 @@ const Preview = styled.img`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
-  animation: float 15s ease infinite;
 
   &:hover {
     border-radius: 25px;
   }
 `;
 
-const CTDescription = styled.p`
+const Description = styled.p`
   font-size: 2rem;
   max-width: 45rem;
   line-height: 3rem;

@@ -30,6 +30,7 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
+  height: 13vh;
 `;
 
 const Header = styled.h1`

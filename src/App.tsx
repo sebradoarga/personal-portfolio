@@ -6,6 +6,8 @@ import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import AboutPage from "./components/pages/About/AboutPage";
 import ContactPage from "./components/pages/Contact/ContactPage";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
+import CountryTrivia from "./components/pages/CountryTrivia/CountryTrivia";
+import BookStore from "./components/pages/BookStore/BookStore";
 
 function App() {
   const [previousPage, setPreviousPage] = useState<string>("");
@@ -26,6 +28,8 @@ function App() {
             path="/portfolio"
             element={<Portfolio setPreviousPage={setPreviousPage} />}
           />
+          <Route path="/country-trivia" element={<CountryTrivia />} />
+          <Route path="/the-story-store" element={<BookStore />} />
           <Route path="/" element={<Homepage previousPage={previousPage} />} />
         </Routes>
       </AnimatePresence>

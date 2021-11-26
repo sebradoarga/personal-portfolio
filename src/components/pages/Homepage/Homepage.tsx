@@ -56,18 +56,29 @@ const Wrapper = styled(motion.div)`
 
 const PageContent = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
 `;
 
 const Headshot = styled.img`
   border-radius: 30%;
-  max-width: 40rem;
+  max-width: 25rem;
   display: block;
+  margin-top: 3rem;
+
+  @media ${device.laptop} {
+    max-width: 40rem;
+    margin-top: 0;
+  }
 `;
 
 const Menu = styled.ul`
@@ -81,10 +92,9 @@ const Btn = styled.button`
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
-  margin-top: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 2rem;
+  margin: 2rem auto;
   display: flex;
   align-items: center;
   line-height: 6rem;
@@ -106,5 +116,9 @@ const Btn = styled.button`
 
   @media ${device.tablet} {
     font-size: 5rem;
+  }
+
+  @media ${device.laptop} {
+    margin: 2rem;
   }
 `;
