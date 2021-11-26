@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { leftPageVariants, pageTransition } from "../../../constants";
 import Navbar from "../../Navbar";
 import nameBackground from "../../../img/name-background.png";
+import { device } from "../../../device";
 
 const AboutPage = ({
   setPreviousPage,
@@ -52,8 +53,13 @@ const PageContent = styled.div`
 
 const Text = styled.p`
   color: #2f1a42;
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: center;
   width: 80%;
-  line-height: 8rem;
+  line-height: 5rem;
+
+  @media ${device.tablet} {
+    font-size: 5rem;
+    line-height: 8rem;
+  }
 `;
