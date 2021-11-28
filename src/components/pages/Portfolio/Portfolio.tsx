@@ -6,6 +6,7 @@ import Navbar from "../../Navbar";
 import CountryTriviaPreview from "../../../img/country-trivia-preview.png";
 import BookStorePreview from "../../../img/bookstore-preview.png";
 import { Link } from "react-router-dom";
+import { device } from "../../../device";
 
 const AboutPage = ({
   setPreviousPage,
@@ -79,11 +80,14 @@ const Preview = styled.img`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
-  opacity: 0.8;
 
-  &:hover {
-    border-radius: 25px;
-    opacity: 1;
+  @media ${device.laptop} {
+    opacity: 0.8;
+
+    &:hover {
+      border-radius: 25px;
+      opacity: 1;
+    }
   }
 `;
 
@@ -92,4 +96,9 @@ const Description = styled.p`
   max-width: 45rem;
   line-height: 3rem;
   letter-spacing: 0.2rem;
+  display: none;
+
+  @media ${device.laptop} {
+    display: block;
+  }
 `;
