@@ -8,7 +8,7 @@ import BookStorePreview from "../../../img/bookstore-preview.png";
 import { Link } from "react-router-dom";
 import { device } from "../../../device";
 
-const AboutPage = ({
+const Portfolio = ({
   setPreviousPage,
 }: {
   setPreviousPage: React.Dispatch<React.SetStateAction<string>>;
@@ -16,6 +16,7 @@ const AboutPage = ({
   useEffect(() => {
     setPreviousPage("portfolio");
   }, []);
+
   return (
     <Wrapper
       style={{ position: "absolute" }}
@@ -44,7 +45,7 @@ const AboutPage = ({
   );
 };
 
-export default AboutPage;
+export default Portfolio;
 
 const Wrapper = styled(motion.div)`
   min-height: 100vh;

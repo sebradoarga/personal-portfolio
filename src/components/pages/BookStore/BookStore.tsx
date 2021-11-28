@@ -9,8 +9,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import display1 from "../../../img/bookstore-display1.png";
 import display2 from "../../../img/bookstore-display2.png";
 import display3 from "../../../img/bookstore-display3.png";
-import CountryTriviaNext from "../../NextProjectButtons/CountryTriviaNext";
 import { device } from "../../../device";
+import nextProject from "../../../img/ct-next-project.png";
+import backToPortfolio from "../../../img/back-to-portfolio-btn.png";
+import { Link } from "react-router-dom";
 
 const BookStore = () => {
   return (
@@ -64,7 +66,7 @@ const BookStore = () => {
               <LinkIcon fontSize="large" /> Check it out
             </SubsectionHeader>
             <NetlifyLink
-              href="https://countrytrivia.netlify.app/"
+              href="https://thestorystore.netlify.app/"
               target="_blank"
             >
               <LanguageIcon fontSize="large" /> link to website
@@ -105,7 +107,14 @@ const BookStore = () => {
       <Display src={display1} alt="" />
       <Display src={display2} alt="" />
       <Display src={display3} alt="" />
-      <CountryTriviaNext />
+      <NavigationButtons>
+        <NavigationButtonLink to="/portfolio">
+          <NavigationButtonImage src={backToPortfolio} alt="" />
+        </NavigationButtonLink>
+        <NavigationButtonLink to="/country-trivia">
+          <NavigationButtonImage src={nextProject} alt="" />
+        </NavigationButtonLink>
+      </NavigationButtons>
     </Wrapper>
   );
 };
@@ -306,4 +315,39 @@ const Item = styled.li`
   letter-spacing: 0.2rem;
   font-weight: 400;
   margin-top: 1rem;
+`;
+
+const NavigationButtons = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  margin: 4rem 0;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 0;
+  }
+`;
+
+const NavigationButtonLink = styled(Link)`
+  display: block;
+  width: 45%;
+  margin: 0.7rem auto;
+
+  @media ${device.tablet} {
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+`;
+
+const NavigationButtonImage = styled.img`
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
 `;
