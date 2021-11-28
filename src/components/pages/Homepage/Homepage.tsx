@@ -82,7 +82,9 @@ const Headshot = styled.img`
 `;
 
 const Menu = styled.ul`
-  margin-left: 3rem;
+  @media ${device.laptop} {
+    margin-left: 3rem;
+  }
 `;
 
 const Btn = styled.button`

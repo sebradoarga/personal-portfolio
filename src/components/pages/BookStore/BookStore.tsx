@@ -9,6 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import display1 from "../../../img/bookstore-display1.png";
 import display2 from "../../../img/bookstore-display2.png";
 import display3 from "../../../img/bookstore-display3.png";
+import CountryTriviaNext from "../../NextProjectButtons/CountryTriviaNext";
 
 const BookStore = () => {
   return (
@@ -103,6 +104,7 @@ const BookStore = () => {
       <Display src={display1} alt="" />
       <Display src={display2} alt="" />
       <Display src={display3} alt="" />
+      <CountryTriviaNext />
     </Wrapper>
   );
 };
@@ -114,7 +116,6 @@ const Wrapper = styled.div`
   height: 100vh;
   background: white;
   overflow-y: auto;
-  padding-bottom: 5rem;
 `;
 
 const PageHeader = styled.img`

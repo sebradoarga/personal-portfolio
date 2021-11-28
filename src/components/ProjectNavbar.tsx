@@ -75,6 +75,7 @@ const MobileNav = styled.ul`
   display: none;
   width: 100%;
   padding-right: 2.5rem;
+  background: white;
 `;
 
 const MobileMenuItem = styled.li`

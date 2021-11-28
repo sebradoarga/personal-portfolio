@@ -79,9 +79,11 @@ const Preview = styled.img`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
+  opacity: 0.8;
 
   &:hover {
     border-radius: 25px;
+    opacity: 1;
   }
 `;
 

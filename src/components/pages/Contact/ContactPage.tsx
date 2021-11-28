@@ -6,6 +6,7 @@ import Navbar from "../../Navbar";
 import image from "../../../img/social-media-img.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { device } from "../../../device";
 
 const AboutPage = ({
   setPreviousPage,
@@ -60,13 +61,19 @@ const Wrapper = styled(motion.div)`
 
 const PageContent = styled.div`
   display: flex;
+  flex-direction: column;
   width: 70%;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 const LeftSide = styled.div`
@@ -102,10 +109,14 @@ const Email = styled.h2`
   margin-top: 5rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #2f1a42;
   border-bottom: 0.3rem dashed #62c68d;
   padding-bottom: 0.5rem;
+
+  @media ${device.tablet} {
+    font-size: 2rem;
+  }
 `;
 
 const Span = styled.span`
@@ -113,5 +124,18 @@ const Span = styled.span`
 `;
 
 const Image = styled.img`
-  width: 50%;
+  width: 100%;
+  margin-top: 2rem;
+
+  @media ${device.mobileXL} {
+    width: 70%;
+  }
+
+  @media ${device.tablet} {
+    width: 50%;
+  }
+
+  @media ${device.laptop} {
+    margin-top: 0;
+  }
 `;
