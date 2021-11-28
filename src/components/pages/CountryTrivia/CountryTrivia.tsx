@@ -326,18 +326,19 @@ const NavigationButtons = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 4rem 0;
+  margin: 6rem 0 4rem 0;
 
   @media ${device.tablet} {
     flex-direction: row;
     justify-content: center;
-    margin: 5rem 0;
+    margin: 7rem auto 5rem auto;
+    width: 70%;
   }
 `;
 
 const NavigationButtonLink = styled(Link)`
   display: block;
-  width: 70%;
+  width: 50%;
   margin: 0.7rem auto;
 
   @media ${device.tablet} {

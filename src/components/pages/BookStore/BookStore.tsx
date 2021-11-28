@@ -137,7 +137,7 @@ const Wrapper = styled.div`
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B04522;
+  background: #6A537E;
   border-radius: 10px;
 
 `;
@@ -217,7 +217,7 @@ const ReadMore = styled.p`
 const InlineGithubLink = styled.a`
   margin-left: 0.5rem;
   font-weight: 400;
-  color: #4f7978;
+  color: #6a537e;
   transition: all 0.3s ease;
 
   &:hover {
@@ -236,21 +236,21 @@ const RightSide = styled.div`
 `;
 
 const Access = styled.div`
-  border: 3px solid #4f7978;
+  border: 3px solid #6a537e;
   padding: 1.5rem;
   border-radius: 5px;
 `;
 
 const Build = styled.div`
   margin-top: 2rem;
-  border: 3px solid #4f7978;
+  border: 3px solid #6a537e;
   padding: 1.5rem;
   border-radius: 5px;
 `;
 
 const Design = styled.div`
   margin-top: 2rem;
-  border: 3px solid #4f7978;
+  border: 3px solid #6a537e;
   padding: 1.5rem;
   border-radius: 5px;
 `;
@@ -262,7 +262,7 @@ const SubsectionHeader = styled.h2`
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  border-bottom: 2px dashed #4f7978;
+  border-bottom: 2px dashed #6a537e;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 
@@ -336,18 +336,19 @@ const NavigationButtons = styled.div`
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
-  margin: 4rem 0;
+  margin: 6rem 0 4rem 0;
 
   @media ${device.tablet} {
     flex-direction: row;
     justify-content: center;
-    margin: 5rem 0;
+    margin: 7rem auto 5rem auto;
+    width: 70%;
   }
 `;
 
 const NavigationButtonLink = styled(Link)`
   display: block;
-  width: 70%;
+  width: 50%;
   margin: 0.7rem auto;
 
   @media ${device.tablet} {
