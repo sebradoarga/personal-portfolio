@@ -59,6 +59,19 @@ const PageContent = styled.div`
   overflow-y: auto;
   padding-bottom: 5rem;
   height: 87vh;
+    ::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #422142;
+  border-radius: 10px;
+
 `;
 
 const BookStore = styled.div`

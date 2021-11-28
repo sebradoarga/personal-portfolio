@@ -126,6 +126,20 @@ const Wrapper = styled.div`
   height: 100vh;
   background: white;
   overflow-y: auto;
+
+  ::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B04522;
+  border-radius: 10px;
+
 `;
 
 const PageHeader = styled.img`
@@ -333,12 +347,13 @@ const NavigationButtons = styled.div`
 
 const NavigationButtonLink = styled(Link)`
   display: block;
-  width: 45%;
+  width: 70%;
   margin: 0.7rem auto;
 
   @media ${device.tablet} {
     margin: 0 1rem;
     transition: transform 0.3s ease;
+    width: 45%;
 
     &:hover {
       transform: scale(1.03);

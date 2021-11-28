@@ -10,6 +10,9 @@ import display1 from "../../../img/country-trivia-display1.png";
 import display2 from "../../../img/country-trivia-display2.png";
 import display3 from "../../../img/country-trivia-display3.png";
 import { device } from "../../../device";
+import previousProject from "../../../img/bookstore-previous-project.png";
+import backToPortfolio from "../../../img/back-to-portfolio-btn.png";
+import { Link } from "react-router-dom";
 
 const CountryTrivia = () => {
   return (
@@ -96,6 +99,14 @@ const CountryTrivia = () => {
       <Display src={display1} alt="" />
       <Display src={display3} alt="" />
       <Display src={display2} alt="" />
+      <NavigationButtons>
+        <NavigationButtonLink to="/the-story-store">
+          <NavigationButtonImage src={previousProject} alt="" />
+        </NavigationButtonLink>
+        <NavigationButtonLink to="/portfolio">
+          <NavigationButtonImage src={backToPortfolio} alt="" />
+        </NavigationButtonLink>
+      </NavigationButtons>
     </Wrapper>
   );
 };
@@ -107,7 +118,19 @@ const Wrapper = styled.div`
   height: 100vh;
   background: white;
   overflow-y: auto;
-  padding-bottom: 5rem;
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7DAC9B;
+  border-radius: 10px;
 `;
 
 const PageHeader = styled.img`
@@ -296,4 +319,40 @@ const Item = styled.li`
   letter-spacing: 0.2rem;
   font-weight: 400;
   margin-top: 1rem;
+`;
+
+const NavigationButtons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 4rem 0;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 0;
+  }
+`;
+
+const NavigationButtonLink = styled(Link)`
+  display: block;
+  width: 70%;
+  margin: 0.7rem auto;
+
+  @media ${device.tablet} {
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+    width: 45%;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+`;
+
+const NavigationButtonImage = styled.img`
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
 `;
