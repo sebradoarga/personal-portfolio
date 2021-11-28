@@ -71,11 +71,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 3rem;
   height: 13vh;
-  padding-bottom: 0;
-
-  @media ${device.tablet} {
-    padding-bottom: 3rem;
-  }
 `;
 
 const StyledLink = styled(Link)`

@@ -10,6 +10,7 @@ import display1 from "../../../img/bookstore-display1.png";
 import display2 from "../../../img/bookstore-display2.png";
 import display3 from "../../../img/bookstore-display3.png";
 import CountryTriviaNext from "../../NextProjectButtons/CountryTriviaNext";
+import { device } from "../../../device";
 
 const BookStore = () => {
   return (
@@ -127,13 +128,25 @@ const ProjectInfo = styled.div`
   margin-top: 5rem;
   padding: 0 4rem;
   display: flex;
+
+  flex-direction: column;
+  margin-bottom: 4rem;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
 `;
 
 const LeftSide = styled.div`
   font-size: 2rem;
-  width: 70%;
+  width: 100%;
   font-weight: 300;
   line-height: 3rem;
+
+  @media ${device.tablet} {
+    width: 70%;
+  }
 `;
 
 const Overview = styled.p`
@@ -142,7 +155,9 @@ const Overview = styled.p`
 `;
 
 const Features = styled.div`
-  margin-left: 5rem;
+  @media ${device.tablet} {
+    margin-left: 5rem;
+  }
 `;
 
 const FeaturesHeader = styled.h2`
@@ -156,7 +171,11 @@ const FeaturesHeader = styled.h2`
 const FeatureList = styled.ul`
   margin-top: 1rem;
   list-style: initial;
-  width: 80%;
+  width: 100%;
+
+  @media ${device.tablet} {
+    width: 80%;
+  }
 `;
 
 const Feature = styled.li`
@@ -166,7 +185,10 @@ const Feature = styled.li`
 
 const ReadMore = styled.p`
   margin-top: 2rem;
-  margin-left: 5rem;
+
+  @media ${device.tablet} {
+    margin-left: 5rem;
+  }
 `;
 
 const InlineGithubLink = styled.a`
@@ -181,7 +203,13 @@ const InlineGithubLink = styled.a`
 `;
 
 const RightSide = styled.div`
-  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-left: 0;
+
+  @media ${device.tablet} {
+    margin-left: 5rem;
+    margin-top: 0;
+  }
 `;
 
 const Access = styled.div`
@@ -259,10 +287,15 @@ const GithubLink = styled.a`
 `;
 
 const Display = styled.img`
-  width: 80%;
+  width: 100%;
   display: block;
-  margin: 5rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   border-radius: 5px;
+
+  @media ${device.tablet} {
+    width: 80%;
+    margin: 5rem auto 0 auto;
+  }
 `;
 
 const List = styled.ul``;

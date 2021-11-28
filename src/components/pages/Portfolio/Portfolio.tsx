@@ -80,6 +80,7 @@ const Preview = styled.img`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 
   @media ${device.laptop} {
     opacity: 0.8;
