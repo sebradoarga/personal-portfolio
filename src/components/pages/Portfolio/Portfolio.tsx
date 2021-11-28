@@ -49,7 +49,9 @@ export default AboutPage;
 const Wrapper = styled(motion.div)`
   min-height: 100vh;
   width: 100%;
-  background: #f7f5f5;
+  // background: #f7f5f5;
+  background: #ece9e6;
+  background: linear-gradient(180deg, #ffffff, #e1e7ea);
 `;
 
 const PageContent = styled.div`
@@ -77,13 +79,13 @@ const CountryTrivia = styled.div`
 
 const Preview = styled.img`
   border-radius: 50%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
 
   @media ${device.laptop} {
-    opacity: 0.8;
+    opacity: 0.9;
 
     &:hover {
       border-radius: 25px;
