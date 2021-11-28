@@ -11,16 +11,36 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const display = {
+  const block = {
     display: "block",
+  };
+
+  const flex = {
+    display: "flex",
+  };
+
+  const hide = {
+    display: "none",
   };
 
   return (
     <>
       <Nav>
-        <Link to="/">
+        <StyledLink to="/" style={isMenuOpen ? hide : block}>
           <Header>Sebastian-Radu Oarga</Header>
-        </Link>
+        </StyledLink>
+        <MobileNav style={isMenuOpen ? flex : hide}>
+          <Link to="/about">
+            <MobileMenuItem>About</MobileMenuItem>
+          </Link>
+          <Link to="/portfolio">
+            <MobileMenuItem>Portfolio</MobileMenuItem>
+          </Link>
+          <Link to="/contact">
+            <MobileMenuItem>Contact</MobileMenuItem>
+          </Link>
+        </MobileNav>
+
         <MaterialIconContainer>
           <MenuIcon
             sx={{ fontSize: 40, color: "#2f1a42" }}
@@ -39,17 +59,6 @@ const Navbar = () => {
           </Link>
         </Links>
       </Nav>
-      <MobileNav style={isMenuOpen ? display : {}}>
-        <Link to="/about">
-          <MobileMenuItem>About</MobileMenuItem>
-        </Link>
-        <Link to="/portfolio">
-          <MobileMenuItem>Portfolio</MobileMenuItem>
-        </Link>
-        <Link to="/contact">
-          <MobileMenuItem>Contact</MobileMenuItem>
-        </Link>
-      </MobileNav>
     </>
   );
 };
@@ -69,20 +78,30 @@ const Nav = styled.nav`
   }
 `;
 
+const StyledLink = styled(Link)`
+  @media ${device.tablet} {
+    display: block !important;
+  }
+`;
+
 const MobileNav = styled.ul`
-  position: absolute;
-  padding-left: 3rem;
-  display: none;
-  width: 100%;
-  padding-right: 2.5rem;
+  width: 30rem;
 `;
 
 const MobileMenuItem = styled.li`
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   color: #2f1a42;
-  margin-top: 1rem;
+  margin: 0 0.5rem;
   text-align: right;
+
+  @media ${device.mobileL} {
+    margin: 0 1rem;
+  }
+
+  @media ${device.tablet} {
+    display: none !important;
+  }
 `;
 
 const Header = styled.h1`

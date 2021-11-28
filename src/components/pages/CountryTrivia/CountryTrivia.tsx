@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from "../../ProjectNavbar";
+import Navbar from "../../Navbar";
 import pageHeaderImg from "../../../img/country-trivia-header.png";
 import LinkIcon from "@mui/icons-material/Link";
 import BuildIcon from "@mui/icons-material/Build";
