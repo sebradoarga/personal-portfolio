@@ -132,6 +132,11 @@ const Wrapper = styled.div`
 
   ::-webkit-scrollbar {
     width: 1rem;
+    display: none;
+
+    @media ${device.laptop} {
+      display: block;
+    }
   }
 
   ::-webkit-scrollbar-track {

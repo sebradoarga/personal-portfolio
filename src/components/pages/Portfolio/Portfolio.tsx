@@ -92,6 +92,11 @@ const PageContent = styled.div`
   height: 87vh;
   ::-webkit-scrollbar {
     width: 1rem;
+    display: none;
+
+    @media ${device.laptop} {
+      display: block;
+    }
   }
 
   ::-webkit-scrollbar-track {
