@@ -44,7 +44,10 @@ const AboutPage = ({
             Email: <Span>sebastianraduoarga@gmail.com</Span>
           </Email>
         </LeftSide>
-        <Image src={image} alt="" />
+        <Image
+          src={image}
+          alt="Drawing of a person sitting in front of a laptop"
+        />
       </PageContent>
     </Wrapper>
   );

@@ -18,7 +18,7 @@ const BookStore = () => {
   return (
     <Wrapper>
       <Navbar />
-      <PageHeader src={pageHeaderImg} alt="" />
+      <PageHeader src={pageHeaderImg} alt="The Story Store" />
       <ProjectInfo>
         <LeftSide>
           <Overview>
@@ -104,15 +104,18 @@ const BookStore = () => {
           </Design>
         </RightSide>
       </ProjectInfo>
-      <Display src={display1} alt="" />
-      <Display src={display2} alt="" />
-      <Display src={display3} alt="" />
+      <Display src={display1} />
+      <Display src={display2} />
+      <Display src={display3} />
       <NavigationButtons>
         <NavigationButtonLink to="/portfolio">
-          <NavigationButtonImage src={backToPortfolio} alt="" />
+          <NavigationButtonImage
+            src={backToPortfolio}
+            alt="Back to portfolio"
+          />
         </NavigationButtonLink>
         <NavigationButtonLink to="/country-trivia">
-          <NavigationButtonImage src={nextProject} alt="" />
+          <NavigationButtonImage src={nextProject} alt="Next project" />
         </NavigationButtonLink>
       </NavigationButtons>
     </Wrapper>

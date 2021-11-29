@@ -128,4 +128,9 @@ const FinalParagraph = styled.p`
   font-weight: 400;
   text-indent: 0;
   margin-top: 2rem;
+  text-align: center;
+
+  @media ${device.laptop} {
+    text-align: left;
+  }
 `;

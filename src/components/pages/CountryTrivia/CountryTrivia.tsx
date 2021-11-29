@@ -18,7 +18,7 @@ const CountryTrivia = () => {
   return (
     <Wrapper>
       <Navbar />
-      <PageHeader src={pageHeaderImg} alt="" />
+      <PageHeader src={pageHeaderImg} alt="Country Trivia" />
       <ProjectInfo>
         <LeftSide>
           <Overview>
@@ -96,15 +96,15 @@ const CountryTrivia = () => {
           </Design>
         </RightSide>
       </ProjectInfo>
-      <Display src={display1} alt="" />
-      <Display src={display3} alt="" />
-      <Display src={display2} alt="" />
+      <Display src={display1} />
+      <Display src={display3} />
+      <Display src={display2} />
       <NavigationButtons>
         <NavigationButtonLink to="/the-story-store">
-          <NavigationButtonImage src={previousProject} alt="" />
+          <NavigationButtonImage src={previousProject} alt="Previous project" />
         </NavigationButtonLink>
         <NavigationButtonLink to="/portfolio-project">
-          <NavigationButtonImage src={nextProject} alt="" />
+          <NavigationButtonImage src={nextProject} alt="Next project" />
         </NavigationButtonLink>
       </NavigationButtons>
     </Wrapper>
@@ -324,7 +324,7 @@ const Item = styled.li`
 
 const NavigationButtons = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   width: 100%;
   margin: 6rem 0 4rem 0;

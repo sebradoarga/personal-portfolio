@@ -14,7 +14,7 @@ const CountryTrivia = () => {
   return (
     <Wrapper>
       <Navbar />
-      <PageHeader src={pageHeaderImg} alt="" />
+      <PageHeader src={pageHeaderImg} alt="My portfolio" />
       <ProjectInfo>
         <LeftSide>
           <Overview>
@@ -54,7 +54,7 @@ const CountryTrivia = () => {
               <LinkIcon fontSize="large" /> Under the hood
             </SubsectionHeader>
             <GithubLink
-              href="https://github.com/sebradoarga/country-trivia"
+              href="https://github.com/sebradoarga/personal-portfolio"
               target="_blank"
             >
               <GitHubIcon fontSize="large" /> see the code
@@ -83,10 +83,13 @@ const CountryTrivia = () => {
       </ProjectInfo>
       <NavigationButtons>
         <NavigationButtonLink to="/country-trivia">
-          <NavigationButtonImage src={previousProject} alt="" />
+          <NavigationButtonImage src={previousProject} alt="Previous project" />
         </NavigationButtonLink>
         <NavigationButtonLink to="/portfolio">
-          <NavigationButtonImage src={backToPortfolio} alt="" />
+          <NavigationButtonImage
+            src={backToPortfolio}
+            alt="Back to portfolio"
+          />
         </NavigationButtonLink>
       </NavigationButtons>
     </Wrapper>

@@ -32,13 +32,21 @@ const Portfolio = ({
       <PageContent className="portfolio-content">
         <LeftsideBubble>
           <Link to="/the-story-store" className="preview">
-            <Preview src={BookStorePreview} alt="" className="bs-preview" />
+            <Preview
+              src={BookStorePreview}
+              alt="Logo for The Story Store"
+              className="bs-preview"
+            />
           </Link>
           <Description className="bs-project-description project-description"></Description>
         </LeftsideBubble>
         <RightsideBubble>
           <Link to="/country-trivia" className="preview">
-            <Preview src={CountryTriviaPreview} alt="" className="ct-preview" />
+            <Preview
+              src={CountryTriviaPreview}
+              alt="Logo for Country Trivia"
+              className="ct-preview"
+            />
           </Link>
           <Description className="ct-project-description project-description"></Description>
         </RightsideBubble>
@@ -46,7 +54,7 @@ const Portfolio = ({
           <Link to="/portfolio-project" className="preview">
             <Preview
               src={PortfolioPreview}
-              alt=""
+              alt="The same drawing of the young man from the homepage of this website"
               className="portfolio-preview"
             />
           </Link>
@@ -56,7 +64,7 @@ const Portfolio = ({
           <Link to="/contact" className="preview">
             <Preview
               src={ComingSoonPreview}
-              alt=""
+              alt="More coming soon"
               className="preview comingsoon-preview"
             />
           </Link>

@@ -29,7 +29,7 @@ const Homepage = ({ previousPage }: { previousPage: string }) => {
     >
       <HomeNavbar />
       <PageContent>
-        <Headshot src={headshot} alt="" />
+        <Headshot src={headshot} alt="Drawing of a young man" />
         <Menu>
           <Link to="/about">
             <Btn>About</Btn>
