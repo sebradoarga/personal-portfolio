@@ -11,7 +11,7 @@ import display2 from "../../../img/country-trivia-display2.png";
 import display3 from "../../../img/country-trivia-display3.png";
 import { device } from "../../../device";
 import previousProject from "../../../img/bookstore-previous-project.png";
-import backToPortfolio from "../../../img/back-to-portfolio-btn.png";
+import nextProject from "../../../img/portfolio-project-next-btn.png";
 import { Link } from "react-router-dom";
 
 const CountryTrivia = () => {
@@ -38,7 +38,7 @@ const CountryTrivia = () => {
                 Light and Dark mode Countries can be favorited and save in
                 Favorite Cart
               </Feature>
-              <Feature>Individual pages for each speciifc countries</Feature>
+              <Feature>Individual pages for each speciifc country</Feature>
               <Feature>
                 Full responsiveness (including the table, which adjusts the
                 amount of shown information based on window size)
@@ -103,8 +103,8 @@ const CountryTrivia = () => {
         <NavigationButtonLink to="/the-story-store">
           <NavigationButtonImage src={previousProject} alt="" />
         </NavigationButtonLink>
-        <NavigationButtonLink to="/portfolio">
-          <NavigationButtonImage src={backToPortfolio} alt="" />
+        <NavigationButtonLink to="/portfolio-project">
+          <NavigationButtonImage src={nextProject} alt="" />
         </NavigationButtonLink>
       </NavigationButtons>
     </Wrapper>

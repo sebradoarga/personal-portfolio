@@ -1,16 +1,12 @@
 import styled from "styled-components";
 import Navbar from "../../Navbar";
-import pageHeaderImg from "../../../img/country-trivia-header.png";
+import pageHeaderImg from "../../../img/portfolio-project-header.png";
 import LinkIcon from "@mui/icons-material/Link";
 import BuildIcon from "@mui/icons-material/Build";
 import BrushIcon from "@mui/icons-material/Brush";
-import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import display1 from "../../../img/country-trivia-display1.png";
-import display2 from "../../../img/country-trivia-display2.png";
-import display3 from "../../../img/country-trivia-display3.png";
 import { device } from "../../../device";
-import previousProject from "../../../img/bookstore-previous-project.png";
+import previousProject from "../../../img/ct-previous-project.png";
 import backToPortfolio from "../../../img/back-to-portfolio-btn.png";
 import { Link } from "react-router-dom";
 
@@ -22,27 +18,23 @@ const CountryTrivia = () => {
       <ProjectInfo>
         <LeftSide>
           <Overview>
-            This is a project I developed while taking part in the Integrify
-            International Academy Fullstack Program. I built this website around
-            the REST Countries API, to display all the countries in the API as a
-            sortable and searchable table. The user can also navigate to
-            individual country pages where additional information about a
-            specific country is displayed. This website is fully responsive and
-            styled entirely from scratch with CSS and styled components.
+            I built this website to introduce myself and some of my work.
+            Keeping this in mind, I tried to use design as a language and give
+            the visitor a feeling of what I'm like as a person and as a
+            developer even before they can navigate to the About page or the
+            individual project pages. Therefore, I allowed myself to be creative
+            and playful in styling the webpage, using cheerful color
+            combinations and subtle animations, to prove, in addition to my
+            full-stack developer skills, my attention to detail and eye for
+            design and pleasing aesthetics.
           </Overview>
           <Features>
             <FeaturesHeader>Features</FeaturesHeader>
             <FeatureList>
-              <Feature>Sortable and searchable table</Feature>
-              <Feature>
-                Light and Dark mode Countries can be favorited and save in
-                Favorite Cart
-              </Feature>
-              <Feature>Individual pages for each speciifc countries</Feature>
-              <Feature>
-                Full responsiveness (including the table, which adjusts the
-                amount of shown information based on window size)
-              </Feature>
+              <Feature>animated, color-changing background</Feature>
+              <Feature>carousel structure (sliding pages)</Feature>
+              <Feature>individual project presentation pages</Feature>
+              <Feature>fully responsive</Feature>
             </FeatureList>
           </Features>
           <ReadMore>
@@ -59,14 +51,8 @@ const CountryTrivia = () => {
         <RightSide>
           <Access>
             <SubsectionHeader>
-              <LinkIcon fontSize="large" /> Check it out
+              <LinkIcon fontSize="large" /> Under the hood
             </SubsectionHeader>
-            <NetlifyLink
-              href="https://countrytrivia.netlify.app/"
-              target="_blank"
-            >
-              <LanguageIcon fontSize="large" /> link to website
-            </NetlifyLink>
             <GithubLink
               href="https://github.com/sebradoarga/country-trivia"
               target="_blank"
@@ -81,7 +67,6 @@ const CountryTrivia = () => {
             <List>
               <Item>React</Item>
               <Item>Typescript</Item>
-              <Item>Redux</Item>
             </List>
           </Build>
           <Design>
@@ -96,11 +81,8 @@ const CountryTrivia = () => {
           </Design>
         </RightSide>
       </ProjectInfo>
-      <Display src={display1} alt="" />
-      <Display src={display3} alt="" />
-      <Display src={display2} alt="" />
       <NavigationButtons>
-        <NavigationButtonLink to="/the-story-store">
+        <NavigationButtonLink to="/country-trivia">
           <NavigationButtonImage src={previousProject} alt="" />
         </NavigationButtonLink>
         <NavigationButtonLink to="/portfolio">
@@ -129,7 +111,7 @@ const Wrapper = styled.div`
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7DAC9B;
+  background: #43778D;
   border-radius: 10px;
 `;
 
@@ -207,11 +189,11 @@ const ReadMore = styled.p`
 const InlineGithubLink = styled.a`
   margin-left: 0.5rem;
   font-weight: 400;
-  color: #ff5d7a;
+  color: #43778d;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #2d505d;
+    color: #ec4e73;
   }
 `;
 
@@ -226,21 +208,21 @@ const RightSide = styled.div`
 `;
 
 const Access = styled.div`
-  border: 3px solid pink;
+  border: 3px solid #43778d;
   padding: 1.5rem;
   border-radius: 5px;
 `;
 
 const Build = styled.div`
   margin-top: 2rem;
-  border: 3px solid pink;
+  border: 3px solid #43778d;
   padding: 1.5rem;
   border-radius: 5px;
 `;
 
 const Design = styled.div`
   margin-top: 2rem;
-  border: 3px solid pink;
+  border: 3px solid #43778d;
   padding: 1.5rem;
   border-radius: 5px;
 `;
@@ -252,31 +234,12 @@ const SubsectionHeader = styled.h2`
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  border-bottom: 2px dashed pink;
+  border-bottom: 2px dashed #43778d;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 
   & * {
     margin: 0 1rem;
-  }
-`;
-
-const NetlifyLink = styled.a`
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 400;
-
-  & * {
-    margin: 1rem;
-  }
-
-  &:hover {
-    color: #2d505d;
   }
 `;
 
@@ -295,19 +258,7 @@ const GithubLink = styled.a`
   }
 
   &:hover {
-    color: #2d505d;
-  }
-`;
-
-const Display = styled.img`
-  width: 100%;
-  display: block;
-  margin: 1rem auto 0 auto;
-  border-radius: 5px;
-
-  @media ${device.tablet} {
-    width: 80%;
-    margin: 5rem auto 0 auto;
+    color: #ec4e73;
   }
 `;
 
