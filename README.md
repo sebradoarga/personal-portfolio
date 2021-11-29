@@ -27,7 +27,7 @@ Therefore, I allowed myself to be creative and playful in styling the webpage, u
 
 ### Links
 
-- Live Site URL: [Sebastian-Radu Oarga](to be added)
+- Live Site URL: [Sebastian-Radu Oarga](http://sebastianraduoarga.com)
 
 ### Built with
 
@@ -43,4 +43,5 @@ Therefore, I allowed myself to be creative and playful in styling the webpage, u
 
 <!-- - Website - [Sebastian-Radu Oarga](to be added) -->
 
+- Website - [Sebastian-Radu Oarga](http://www.sebastianraduoarga.com)
 - LinkedIn - [Sebastian-Radu Oarga](https://www.linkedin.com/in/sebastianoarga/)
