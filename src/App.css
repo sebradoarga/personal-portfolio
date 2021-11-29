@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,12 @@ body {
   );
   background-size: 1000% 1000%;
   animation: animate 120s ease-in-out infinite;
+  position: relative;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 a {

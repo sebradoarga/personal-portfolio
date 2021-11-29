@@ -58,10 +58,10 @@ export default AboutPage;
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: transparent;
   position: relative;
-  border: 3px solid red;
+  overflow: hidden;
 `;
 
 const PageContent = styled.div`
@@ -74,7 +74,6 @@ const PageContent = styled.div`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 3px solid yellow;
 
   @media ${device.laptop} {
     flex-direction: row;
@@ -86,7 +85,6 @@ const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid green;
 `;
 
 const SocialMedia = styled.div`
@@ -94,7 +92,6 @@ const SocialMedia = styled.div`
   justify-content: center;
   width: 100%;
   margin-top: 5rem;
-  border: 3px solid blue;
 `;
 
 const Hyperlink = styled.a`
@@ -107,7 +104,6 @@ const Hyperlink = styled.a`
   height: 10rem;
   margin: 0 2rem;
   transition: transform 0.3s ease;
-  border: 3px solid pink;
 
   &:hover {
     transform: scale(1.1);
@@ -122,7 +118,6 @@ const Email = styled.h2`
   color: #2f1a42;
   border-bottom: 0.3rem dashed #62c68d;
   padding-bottom: 0.5rem;
-  border: 3px solid orange;
 
   @media ${device.tablet} {
     font-size: 2rem;
@@ -131,13 +126,11 @@ const Email = styled.h2`
 
 const Span = styled.span`
   font-weight: 400;
-  border: 3px solid purple;
 `;
 
 const Image = styled.img`
   width: 100%;
   margin-top: 2rem;
-  border: 3px solid gray;
 
   @media ${device.mobileXL} {
     width: 70%;
