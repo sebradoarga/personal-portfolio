@@ -43,7 +43,11 @@ const Navbar = () => {
 
         <MaterialIconContainer>
           <MenuIcon
-            sx={{ fontSize: 40, color: "#2f1a42" }}
+            sx={
+              isMenuOpen
+                ? { fontSize: 40, color: "#7DAC9B" }
+                : { fontSize: 40, color: "#2f1a42" }
+            }
             onClick={clickHandler}
           />
         </MaterialIconContainer>
@@ -86,7 +90,7 @@ const MobileNav = styled.ul`
 const MobileMenuItem = styled.li`
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
-  color: #2f1a42;
+  color: #7dac9b;
   margin: 0 0.5rem;
   text-align: right;
 
