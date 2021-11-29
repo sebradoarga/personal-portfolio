@@ -15,6 +15,7 @@ const AboutPage = ({
 }) => {
   useEffect(() => {
     setPreviousPage("contact");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

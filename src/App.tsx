@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import Homepage from "./components/pages/Homepage/Homepage";
-import { AnimatePresence, motion } from "framer-motion";
-import { Routes, Route, NavLink, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Routes, Route } from "react-router-dom";
 import AboutPage from "./components/pages/About/AboutPage";
 import ContactPage from "./components/pages/Contact/ContactPage";
 import Portfolio from "./components/pages/Portfolio/Portfolio";

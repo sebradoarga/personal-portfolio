@@ -14,6 +14,7 @@ const AboutPage = ({
 }) => {
   useEffect(() => {
     setPreviousPage("about");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Wrapper
