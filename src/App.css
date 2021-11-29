@@ -34,13 +34,6 @@ ul {
   list-style: none;
 }
 
-.name-background {
-  background-image: url("./img/name-background.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .bs-preview {
   animation: float1 15s ease infinite;
 }

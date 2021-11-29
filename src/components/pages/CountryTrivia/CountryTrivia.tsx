@@ -119,18 +119,19 @@ const Wrapper = styled.div`
   background: white;
   overflow-y: auto;
 
-::-webkit-scrollbar {
-  width: 1rem;
-}
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #7DAC9B;
-  border-radius: 10px;
+  ::-webkit-scrollbar-thumb {
+    background: #7dac9b;
+    border-radius: 10px;
+  }
 `;
 
 const PageHeader = styled.img`
