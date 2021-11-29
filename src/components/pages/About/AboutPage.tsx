@@ -29,12 +29,19 @@ const AboutPage = ({
       <PageContent>
         <Headshot src={headshotImage} alt="headshot image" />
         <PersonalDescription>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          temporibus quasi mollitia neque magni aspernatur voluptatibus et
-          deleniti voluptatem ipsa eius libero obcaecati culpa dolorum, aperiam
-          ab soluta tempore minima dolor, ut necessitatibus nostrum. Repellat,
-          laborum recusandae assumenda atque reprehenderit totam necessitatibus
-          illo voluptate illum, voluptatibus ullam voluptatum quibusdam dolore!
+          <p>
+            Hi! I'm Sebastian, a Freiburg-based full-stack web developer with a
+            passion for eye-catching design.
+          </p>
+          <p>
+            I enjoy being creative and learning something new every day. In my
+            work, I'm driven by passion, curiosity, and a desire to build
+            greater things in better ways.
+          </p>
+          <FinalParagraph>
+            Currently enrolled in the Integrify International Academy Full Stack
+            Program.
+          </FinalParagraph>
         </PersonalDescription>
       </PageContent>
     </Wrapper>
@@ -96,10 +103,10 @@ const Headshot = styled.img`
   }
 `;
 
-const PersonalDescription = styled.p`
+const PersonalDescription = styled.div`
   width: 100%;
   font-size: 1.8rem;
-  color: black;
+  color: #4a345c;
   line-height: 2.5rem;
   font-weight: 300;
   margin-top: 2rem;
@@ -115,4 +122,10 @@ const PersonalDescription = styled.p`
   @media ${device.laptop} {
     width: 55%;
   }
+`;
+
+const FinalParagraph = styled.p`
+  font-weight: 400;
+  text-indent: 0;
+  margin-top: 2rem;
 `;
