@@ -27,7 +27,7 @@ Therefore, I allowed myself to be creative and playful in styling the webpage, u
 
 ### Links
 
-- Live Site URL: [Sebastian-Radu Oarga](http://sebastianraduoarga.com)
+- Live Site URL: [Sebastian-Radu Oarga](http://www.sebastianraduoarga.com)
 
 ### Built with
 
