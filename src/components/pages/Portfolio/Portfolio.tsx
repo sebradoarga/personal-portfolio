@@ -5,6 +5,8 @@ import { downPageVariants, pageTransition } from "../../../constants";
 import Navbar from "../../Navbar";
 import CountryTriviaPreview from "../../../img/country-trivia-preview.png";
 import BookStorePreview from "../../../img/bookstore-preview.png";
+import PortfolioPreview from "../../../img/portfolio-preview.png";
+import ComingSoonPreview from "../../../img/comingSoon-preview.png";
 import { Link } from "react-router-dom";
 import { device } from "../../../device";
 
@@ -27,19 +29,39 @@ const Portfolio = ({
       transition={pageTransition}
     >
       <Navbar />
-      <PageContent>
-        <BookStore>
+      <PageContent className="portfolio-content">
+        <LeftsideBubble>
           <Link to="/the-story-store" className="preview">
             <Preview src={BookStorePreview} alt="" className="bs-preview" />
           </Link>
           <Description className="bs-project-description project-description"></Description>
-        </BookStore>
-        <CountryTrivia>
+        </LeftsideBubble>
+        <RightsideBubble>
           <Link to="/country-trivia" className="preview">
             <Preview src={CountryTriviaPreview} alt="" className="ct-preview" />
           </Link>
           <Description className="ct-project-description project-description"></Description>
-        </CountryTrivia>
+        </RightsideBubble>
+        <LeftsideBubble>
+          <Link to="/portfolio-project" className="preview">
+            <Preview
+              src={PortfolioPreview}
+              alt=""
+              className="portfolio-preview"
+            />
+          </Link>
+          <Description className="portfolio-project-description project-description"></Description>
+        </LeftsideBubble>
+        <RightsideBubble>
+          <Link to="/contact" className="preview">
+            <Preview
+              src={ComingSoonPreview}
+              alt=""
+              className="preview comingsoon-preview"
+            />
+          </Link>
+          <Description className="comingsoon-description project-description"></Description>
+        </RightsideBubble>
       </PageContent>
     </Wrapper>
   );
@@ -74,7 +96,7 @@ const PageContent = styled.div`
 
 `;
 
-const BookStore = styled.div`
+const LeftsideBubble = styled.div`
   margin-top: 5%;
   display: flex;
   align-items: center;
@@ -82,7 +104,7 @@ const BookStore = styled.div`
   padding: 0 15%;
 `;
 
-const CountryTrivia = styled.div`
+const RightsideBubble = styled.div`
   margin-top: 5%;
   display: flex;
   align-items: center;
@@ -99,7 +121,7 @@ const Preview = styled.img`
   width: 100%;
 
   @media ${device.laptop} {
-    opacity: 0.9;
+    opacity: 0.8;
 
     &:hover {
       border-radius: 25px;

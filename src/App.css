@@ -49,12 +49,28 @@ ul {
   animation: float2 15s ease infinite;
 }
 
+.portfolio-preview {
+  animation: float3 15s ease infinite;
+}
+
+.comingsoon-preview {
+  animation: float1 15s ease infinite;
+}
+
 .ct-project-description::after {
   content: "Responsive, API-connected website that displays information about countries from around the world. Coded with React and Typescript.";
 }
 
 .bs-project-description::after {
   content: "Full-stack project - Online bookstore coded with the MERN stack.";
+}
+
+.portfolio-project-description::after {
+  content: "Find out more about the website you're browsing right now.";
+}
+
+.comingsoon-description::after {
+  content: "The journey continues... a few more projects are yet to be added. Until then, why not get in touch?";
 }
 
 .project-description::after {
@@ -64,6 +80,11 @@ ul {
 
 .preview:hover ~ .project-description::after {
   opacity: 0.8;
+}
+
+.portfolio-content {
+  background-image: url("./img/coding-pattern-bk.png");
+  background-size: contain;
 }
 
 @keyframes animate {
@@ -118,6 +139,24 @@ ul {
   }
   75% {
     transform: translate(3rem, -1rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2rem, 2rem);
+  }
+  50% {
+    transform: translate(1.5rem, -1.5rem);
+  }
+  75% {
+    transform: translate(1rem, 3rem);
   }
   100% {
     transform: translate(0, 0);
