@@ -4,20 +4,11 @@
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Description](#description)
-  - [Features](#features)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Styled with](#styled-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [Description](#description)
+- [Features](#features)
+- [Built with](#built-with)
+- [Styled with](#styled-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
 
 ### Description
 
@@ -38,37 +29,15 @@ Therefore, I allowed myself to be creative and playful in styling the webpage, u
 
 - Live Site URL: [Sebastian-Radu Oarga](to be added)
 
-## My process
-
 ### Built with
 
-- [NodeJS](https://nodejs.org/en/)
-- [ExpressJS](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose](https://mongoosejs.com/)
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
-- [Redux](https://redux.js.org/)
 
 ### Styled with
 
 - CSS
 - [Styled Components](https://styled-components.com/)
-
-### What I learned
-
-This project was a great opportunity to learn a lot about the MERN stack. Developing the database was definitely a challenge, but one that pushed my skills to expand.
-
-I was particularly happy to work on authentication, which was a first for me, but I found it fascinating.
-
-I tried to dedicate equal attention to the front-end side of the project. I designed and styled the website myself, meaning to make it look as professional as possible -- like a store I could see myself buying from.
-
-### Continued development
-
-Here are some features I still plan to implement:
-
-- a searchbar that allows to find both books and authors
-- editing permission for administrators, so that they can edit book or author information directly on the website
 
 ## Author
 
