@@ -1,4 +1,4 @@
-<h1 align="center">My Developer Portolio</h1>
+<h1 align="center">My Developer Portfolio</h1>
 
 <p align="center"><img src="./public/website-readme-preview.png" align="center"><p>
 
