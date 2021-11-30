@@ -35,7 +35,7 @@ const AboutPage = ({
             passion for eye-catching design.
           </p>
           <p>
-            I enjoy being creative and learning something new every day. In my
+            I enjoy being creative and constantly expanding my skills. In my
             work, I'm driven by passion, curiosity, and a desire to build
             greater things in better ways.
           </p>
@@ -48,10 +48,6 @@ const AboutPage = ({
     </Wrapper>
   );
 };
-
-//  I'm a full-stack web developer with a passion for eye-catching design.
-//           Currently enrolled in the Full Stack Program @ Integrify International
-//           Academy.
 
 export default AboutPage;
 
