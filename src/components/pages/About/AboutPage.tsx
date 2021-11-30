@@ -31,7 +31,7 @@ const AboutPage = ({
         <Headshot src={headshotImage} alt="headshot image" />
         <PersonalDescription>
           <p>
-            Hi! I'm Sebastian, a Freiburg-based full-stack web developer with a
+            Hi! I'm Sebastian, a Freiburg-based front-end web developer with a
             passion for eye-catching design.
           </p>
           <p>
