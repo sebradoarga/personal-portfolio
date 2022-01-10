@@ -54,6 +54,7 @@ const BookStore = () => {
             <InlineGithubLink
               href="https://github.com/sebradoarga/fullstack-online-bookstore"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github
             </InlineGithubLink>
@@ -68,12 +69,14 @@ const BookStore = () => {
             <NetlifyLink
               href="https://thestorystore.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <LanguageIcon fontSize="large" /> link to website
             </NetlifyLink>
             <GithubLink
               href="https://github.com/sebradoarga/fullstack-online-bookstore"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <GitHubIcon fontSize="large" /> see the code
             </GithubLink>

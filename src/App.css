@@ -41,20 +41,18 @@ ul {
   list-style: none;
 }
 
-.bs-preview {
+.bs-preview,
+.audiophile-preview {
   animation: float1 15s ease infinite;
 }
 
-.ct-preview {
+.ct-preview,
+.comingsoon-preview {
   animation: float2 15s ease infinite;
 }
 
 .portfolio-preview {
   animation: float3 15s ease infinite;
-}
-
-.comingsoon-preview {
-  animation: float1 15s ease infinite;
 }
 
 .ct-project-description::after {
@@ -67,6 +65,10 @@ ul {
 
 .portfolio-project-description::after {
   content: "Find out more about the website you're browsing right now.";
+}
+
+.audiophile-description::after {
+  content: "Multi-page, responsive e-commerce website developed with Vue.js and SCSS.";
 }
 
 .comingsoon-description::after {

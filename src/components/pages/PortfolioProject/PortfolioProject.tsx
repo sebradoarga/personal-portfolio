@@ -7,7 +7,7 @@ import BrushIcon from "@mui/icons-material/Brush";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { device } from "../../../device";
 import previousProject from "../../../img/ct-previous-project.png";
-import backToPortfolio from "../../../img/back-to-portfolio-btn.png";
+import nextProject from "../../../img/audiophile-next-project.png";
 import { Link } from "react-router-dom";
 
 const CountryTrivia = () => {
@@ -42,6 +42,7 @@ const CountryTrivia = () => {
             <InlineGithubLink
               href="https://github.com/sebradoarga/country-trivia"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github
             </InlineGithubLink>
@@ -56,6 +57,7 @@ const CountryTrivia = () => {
             <GithubLink
               href="https://github.com/sebradoarga/personal-portfolio"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <GitHubIcon fontSize="large" /> see the code
             </GithubLink>
@@ -85,11 +87,8 @@ const CountryTrivia = () => {
         <NavigationButtonLink to="/country-trivia">
           <NavigationButtonImage src={previousProject} alt="Previous project" />
         </NavigationButtonLink>
-        <NavigationButtonLink to="/portfolio">
-          <NavigationButtonImage
-            src={backToPortfolio}
-            alt="Back to portfolio"
-          />
+        <NavigationButtonLink to="/audiophile">
+          <NavigationButtonImage src={nextProject} alt="next project" />
         </NavigationButtonLink>
       </NavigationButtons>
     </Wrapper>

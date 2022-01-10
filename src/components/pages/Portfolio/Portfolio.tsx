@@ -6,6 +6,7 @@ import Navbar from "../../Navbar";
 import CountryTriviaPreview from "../../../img/country-trivia-preview.png";
 import BookStorePreview from "../../../img/bookstore-preview.png";
 import PortfolioPreview from "../../../img/portfolio-preview.png";
+import AudiophilePreview from "../../../img/audiophile-preview.png";
 import ComingSoonPreview from "../../../img/comingSoon-preview.png";
 import { Link } from "react-router-dom";
 import { device } from "../../../device";
@@ -62,6 +63,16 @@ const Portfolio = ({
           <Description className="portfolio-project-description project-description"></Description>
         </LeftsideBubble>
         <RightsideBubble>
+          <Link to="/audiophile" className="preview">
+            <Preview
+              src={AudiophilePreview}
+              alt="audiophile"
+              className="preview audiophile-preview"
+            />
+          </Link>
+          <Description className="audiophile-description project-description"></Description>
+        </RightsideBubble>
+        <LeftsideBubble>
           <Link to="/contact" className="preview">
             <Preview
               src={ComingSoonPreview}
@@ -70,7 +81,7 @@ const Portfolio = ({
             />
           </Link>
           <Description className="comingsoon-description project-description"></Description>
-        </RightsideBubble>
+        </LeftsideBubble>
       </PageContent>
     </Wrapper>
   );

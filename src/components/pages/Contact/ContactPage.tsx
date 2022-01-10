@@ -37,6 +37,7 @@ const AboutPage = ({
             <Hyperlink
               href="https://www.linkedin.com/in/sebastianoarga/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <LinkedInIcon sx={{ fontSize: 60, color: "#2F1A42" }} />
             </Hyperlink>
