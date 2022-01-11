@@ -160,8 +160,10 @@ const ProjectInfo = styled.div`
 
   @media ${device.tablet} {
     flex-direction: row;
-    margin-bottom: 0;
     justify-content: space-between;
+    width: 80%;
+    margin: 5rem auto 0 auto;
+    padding: 0;
   }
 `;
 
