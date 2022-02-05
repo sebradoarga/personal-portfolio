@@ -40,8 +40,11 @@ const AboutPage = ({
             greater things in better ways.
           </p>
           <FinalParagraph>
-            Currently enrolled in the Integrify International Academy Full Stack
-            Program.
+            Currently employed as a Junior Front-End Developer
+            <a target="_blank" rel="noreferrer" href="https://www.i22.de/">
+              @i22
+            </a>
+            .
           </FinalParagraph>
         </PersonalDescription>
       </PageContent>
@@ -131,6 +134,16 @@ const FinalParagraph = styled.p`
   text-indent: 0;
   margin-top: 2rem;
   text-align: center;
+
+  a {
+    margin-left: 0.5rem;
+    color: #56bba8;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #8dd7f7;
+    }
+  }
 
   @media ${device.laptop} {
     text-align: left;
