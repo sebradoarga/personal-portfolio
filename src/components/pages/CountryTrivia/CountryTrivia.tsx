@@ -38,7 +38,7 @@ const CountryTrivia = () => {
                 Light and Dark mode Countries can be favorited and save in
                 Favorite Cart
               </Feature>
-              <Feature>Individual pages for each speciifc country</Feature>
+              <Feature>Individual pages for each specific country</Feature>
               <Feature>
                 Full responsiveness (including the table, which adjusts the
                 amount of shown information based on window size)
